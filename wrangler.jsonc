@@ -1,0 +1,10 @@
+{
+	// Top-level configuration
+	"name": "cloudflare-hono-waitlist-template",
+	"main": "src/server/index.ts",
+	// Set this to today's date
+	"compatibility_date": "2026-09-06"
+	
+	
+	
+}

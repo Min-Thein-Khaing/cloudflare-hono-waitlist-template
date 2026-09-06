@@ -6,13 +6,15 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "bun run --bun astro dev",
+    "dev": "concurrently \"bun run client\" \"bun run worker\"",
+    "client": "bun run --bun astro dev",
     "build": "bun run --bun astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint 'src/**/*.{js,ts,tsx,astro}'"
+    "lint": "eslint 'src/**/*.{js,ts,tsx,astro}'",
+    "worker": "wrangler dev"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.5",
@@ -21,14 +23,17 @@
     "@types/react-dom": "^19.2.7",
     "@typescript-eslint/parser": "^8.69.0",
     "astro": "^7.3.1",
+    "concurrently": "^10.0.5",
     "eslint": "^10.10.0",
     "eslint-plugin-astro": "^3.1.0",
+    "hono": "^4.13.7",
     "lucide-react": "^1.41.0",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "wrangler": "^4.129.0"
   },
   "allowScripts": {
     "esbuild": true

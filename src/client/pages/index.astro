@@ -1,6 +1,7 @@
 ---
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
+import { ServerStatus } from "../components/ServerStatus.";
 import { SignUp } from "../components/SignUp";
 import Layout from "../layouts/Layout.astro";
 
@@ -12,6 +13,7 @@ import Layout from "../layouts/Layout.astro";
 	<Hero />
 	<div class="flex flex-col  items-center justify-center">
 		<SignUp />
+		<ServerStatus />
 		<div class="flex gap-4">
 			<Card  title="Get interview Already" description="haha"/>
 			<Card title="Get interview Already" description="haha" />
