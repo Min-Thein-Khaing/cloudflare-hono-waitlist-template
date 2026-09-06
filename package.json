@@ -9,12 +9,31 @@
     "dev": "bun run --bun astro dev",
     "build": "bun run --bun astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint 'src/**/*.{js,ts,tsx,astro}'"
   },
   "dependencies": {
-    "astro": "^7.3.1"
+    "@astrojs/react": "^6.0.5",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@typescript-eslint/parser": "^8.69.0",
+    "astro": "^7.3.1",
+    "eslint": "^10.10.0",
+    "eslint-plugin-astro": "^3.1.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "daisyui": "^5.7.28",
+    "prettier-plugin-tailwindcss": "^0.8.1"
   }
 }

@@ -1,0 +1,2 @@
+
+bun add --dev prettier-plugin-tailwindcss
