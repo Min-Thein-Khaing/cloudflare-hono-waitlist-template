@@ -1,6 +1,7 @@
 ---
-import Hello from "../components/Hello.astro";
-import { Hi } from "../components/Hi";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import { SignUp } from "../components/SignUp";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -8,6 +9,13 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Hello />
-  <Hi client:only="react" />
+	<Hero />
+	<div class="flex flex-col  items-center justify-center">
+		<SignUp />
+		<div class="flex gap-4">
+			<Card  title="Get interview Already" description="haha"/>
+			<Card title="Get interview Already" description="haha" />
+			<Card title="Get interview Already" description="haha" />
+		</div>
+	</div>
 </Layout>
