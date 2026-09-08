@@ -1,2 +1,5 @@
 
 bun add --dev prettier-plugin-tailwindcss
+
+create auth-secret
+ bunx wrangler secret put AUTH_SECRET --env staging

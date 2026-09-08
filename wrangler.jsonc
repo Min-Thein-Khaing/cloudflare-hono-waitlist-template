@@ -3,8 +3,23 @@
 	"name": "cloudflare-hono-waitlist-template",
 	"main": "src/server/index.ts",
 	// Set this to today's date
-	"compatibility_date": "2026-09-06"
-	
-	
-	
+	"compatibility_date": "2026-09-06",
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"env": {
+		"staging": {
+			"vars": {
+				"ENVIRONMENT": "staging",
+				"CF_ACCESS_DOMAIN": "https://soft-dawn-0cd2.cloudflareaccess.com",
+				"POLICY_AUD": "66a1a7481d4e0c981919ac003e972afe98db9e18be08d07cb4e5e239e1df2289",
+			},
+		},
+		"production": {
+			"vars": {
+				"ENVIRONMENT": "production",
+			},
+		},
+	},
 }

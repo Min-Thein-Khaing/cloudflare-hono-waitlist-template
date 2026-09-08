@@ -11,13 +11,16 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
-    server:{
-      proxy:{
+    server: {
+      watch: {
+        ignored: ["**/.wrangler/**"],
+      },
+      proxy: {
         "/api": {
           target: "http://localhost:8787",
-        }
-      }
-    }
+        },
+      },
+    },
   },
 
   integrations: [react()],
