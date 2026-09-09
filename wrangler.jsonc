@@ -8,18 +8,34 @@
 		"directory": "./dist",
 		"binding": "ASSETS"
 	},
+	"d1_databases": [
+				{
+					"binding": "DB",
+					"database_name": "dojo-d1-dev-db",
+					"database_id": "123",
+					"migrations_dir": "./src/server/db/migrations"
+				}
+			],
 	"env": {
 		"staging": {
 			"vars": {
 				"ENVIRONMENT": "staging",
 				"CF_ACCESS_DOMAIN": "https://soft-dawn-0cd2.cloudflareaccess.com",
-				"POLICY_AUD": "66a1a7481d4e0c981919ac003e972afe98db9e18be08d07cb4e5e239e1df2289",
+				"POLICY_AUD": "66a1a7481d4e0c981919ac003e972afe98db9e18be08d07cb4e5e239e1df2289"
 			},
+			"d1_databases": [
+				{
+					"binding": "DB",
+					"database_name": "dojo-d1-staging-db",
+					"database_id": "29b311b8-a3a3-41f1-8e8d-924c659dd6a3",
+					"migrations_dir": "./src/server/db/migrations"
+				}
+			]
 		},
 		"production": {
 			"vars": {
-				"ENVIRONMENT": "production",
-			},
-		},
-	},
+				"ENVIRONMENT": "production"
+			}
+		}
+	}
 }

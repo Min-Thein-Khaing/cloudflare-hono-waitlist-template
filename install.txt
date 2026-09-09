@@ -3,3 +3,40 @@ bun add --dev prettier-plugin-tailwindcss
 
 create auth-secret
  bunx wrangler secret put AUTH_SECRET --env staging
+
+
+ drizzle 
+ bun add drizzle-orm
+ bun add -d drizzle-kit
+
+ CLOUDFLARE_ACCOUNT_ID ရယူရန်
+wrangler whoami
+
+CLOUDFLARE_DATABASE_ID ရယူရန်
+wrangler d1 list
+
+CLOUDFLARE_D1_TOKEN (API Token) ဖန်တီးရယူရန်
+Cloudflare API Tokens Page သို့ သွားပါ။
+"Create Token" ခလုတ်ကို နှိပ်ပါ။
+အောက်သို့ scroll ဆွဲပြီး "Custom token" (သို့မဟုတ် D1 template) ရှိ "Get started" ကို နှိပ်ပါ။
+Permissions တွင်:
+Account -> D1 -> Edit ကို ရွေးပေးပါ။
+Continue to summary နှိပ်ပြီး Create Token ကို နှိပ်ပါ။
+ထွက်လာသော API Token (စာလုံးရှည်) ကို ကူးယူပါ။
+
+
+for drizzle 
+bunx drizzle-kit generate
+
+Local Database သို့ apply လုပ်ရန်
+bunx wrangler d1 migrations apply <YOUR_DB_NAME> --local
+
+Staging / Production Cloudflare D1 သို့ apply လုပ်ရန်:
+bunx wrangler d1 migrations apply <YOUR_DB_NAME> --remote --env staging
+
+
+//bun add -d @cloudflare/workers-types
+
+
+//drizzle db see
+bun add -d drizzle-seed
